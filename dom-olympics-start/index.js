@@ -31,16 +31,12 @@ const themeDropDown = document.getElementById("theme-drop-down");
 themeDropDown.addEventListener('change', function theme() {
   if(themeDropDown === "theme-one") {
     for(i=0; i < leftMessages.length; i++) {
-      leftMessages[i].style.backgroundColor = "blue/brown" 
+      leftMessages[i].style.backgroundColor = "blue" 
     }
   }
 }) 
 
-element.classList.toggle("theme-two");
-
-for(let i = 0; i < messages.length; i++) {
-  messages[i].classList.toggle("theme-two");
-}
+element.classList.toggle("theme-one");
 
 //Silver do not feel confident, will ask TA.
 
@@ -49,11 +45,3 @@ for(let i = 0; i < messages.length; i++) {
 //create a function
 //use an if else statement inside of this function
 //inside of this if else statement, loop over the messages
-
-function theme() {
-  if(themeDropDown === "theme-one") {
-    for(i=0; i < rightMessages.length; i++) {
-      rightMessages[i].style.backgroundColor = "red" 
-    }
-  }
-}
