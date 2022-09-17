@@ -11,17 +11,30 @@ document.getElementById("header").appendChild(p);
 
 const messages = document.getElementsByClassName("message");
 
-messages[0].textContent = "you're great";
-messages[1].textContent = "thanks!";
+messages[0].innerHTML = "you're great";
+messages[1].innerHTML = "thanks!";
 messages[2].textContent = "you're welcome";
 messages[3].textContent = "you're awesome";
 
-//Bronze not working but messages have been rewritten
 
-const selectElement = document.getElementById("theme-drop-down");
-element.addEventListener('change', function(){
-  //handle change
-}); 
+const clear = document.getElementById("clear-button")
+
+clear.addEventListener('click', function (e){
+  document.getElementsByClassName("message").textContent = ""
+  
+  })
+
+//Bronze
+
+const themeDropDown = document.getElementById("theme-drop-down");
+
+themeDropDown.addEventListener('change', function theme() {
+  if(themeDropDown === "theme-one") {
+    for(i=0; i < leftMessages.length; i++) {
+      leftMessages[i].style.backgroundColor = "blue/brown" 
+    }
+  }
+}) 
 
 element.classList.toggle("theme-two");
 
@@ -30,3 +43,17 @@ for(let i = 0; i < messages.length; i++) {
 }
 
 //Silver do not feel confident, will ask TA.
+
+//grab theme-drop-down id
+//grab messages
+//create a function
+//use an if else statement inside of this function
+//inside of this if else statement, loop over the messages
+
+function theme() {
+  if(themeDropDown === "theme-one") {
+    for(i=0; i < rightMessages.length; i++) {
+      rightMessages[i].style.backgroundColor = "red" 
+    }
+  }
+}
